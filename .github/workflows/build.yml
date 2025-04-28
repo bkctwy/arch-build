@@ -10,7 +10,7 @@ jobs:
   buildAUR:
     strategy:
       matrix:
-        repos: [visual-studio-code-bin, mihomo-party, go-musicfox, google-chrome]
+        repos: [visual-studio-code-bin, mihomo-party, go-musicfox-bin, google-chrome]
         # include:
         #   - repos: git-cola
         #     preinstall-pkgs: "at-spi2-core"

@@ -72,15 +72,15 @@ jobs:
 
             - uses: actions/upload-artifact@v4
               with:
-                  path: ./*/*.pkg.tar.zst
-                  name: ${{ matrix.repos }}
+                  path: ./nonaur-pkgbuilds/${{ matrix.non-aur-repos }}/*.pkg.tar.zst
+                  name: ${{ matrix.non-aur-repos }}
                   if-no-files-found: error
 
             - uses: ncipollo/release-action@v1
               with:
                   allowUpdates: true
                   tag: "packages"
-                  artifacts: "./*/*.zst"
+                  artifacts: "./nonaur-pkgbuilds/${{ matrix.non-aur-repos }}/*.zst"
                   token: ${{ secrets.GITHUB_TOKEN }}
 
     uploadToOneDrive:

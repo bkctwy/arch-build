@@ -65,7 +65,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
 
-            - uses: ./build-non-aur-action
+            - uses: ./build-nonaur-action
               with:
                   pkgdir: ./nonaur-pkgbuilds/{{ matrix.non-aur-repos }}
                   aurDeps: true
